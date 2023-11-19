@@ -1,0 +1,82 @@
+// //Helping functions
+// void rotateRight(Node* &root) {
+//     //TODO: Rotate and return new root after rotate
+//     Node* tmp = root->pLeft;
+//     root->pLeft = tmp->pRight;
+//     tmp->pRight = root;
+//     root = tmp;
+// }
+
+// void rotateLeft(Node* &root) {
+//     //TODO: Rotate and return new root after rotate
+//     Node* tmp = root->pRight;
+//     root->pRight = tmp->pLeft;
+//     tmp->pLeft = root;
+//     root = tmp;
+// }
+
+// void insertRec(const T &value, Node* &node) {
+//     Node* tmp = NULL;
+//     if(!node) node = new Node(value);
+//     else if(value < node->data) {
+//         if(node->pLeft) insertRec(value, node->pLeft);
+//         else {
+//             tmp = new Node(value);
+//             node->pLeft = tmp;
+//             // cout << "insert " << value << " into left of " << node->data << endl;
+//         }
+//     }
+//     else if(value > node->data) {
+//         if(node->pRight) insertRec(value, node->pRight);
+//         else {
+//             Node* tmp = new Node(value);
+//             node->pRight = tmp;
+//             // cout << "insert " << value << " into right of " << node->data << endl;
+//         }
+//     }
+//     else {
+//         tmp = new Node(value);
+//         tmp->pRight = node->pRight;
+//         node->pRight = tmp;
+//     }
+    
+//     int i = getHeightRec(node->pRight) - getHeightRec(node -> pLeft);
+//     // cout << "Node = " << node->data << " i = " << i << endl;
+//     if(i < -1) {
+//         if(node->pLeft) {
+//             if(node->pLeft->balance == RH) {
+//             // cout << "Rotate left at subnode " << node->pLeft->data << endl;
+//                 rotateLeft(node->pLeft);
+//             }
+//         }
+
+//         // cout << "Rotate right at node " << node->data << endl;
+//         rotateRight(node);
+//     }
+//     else if(i > 1) {
+//         if(node->pRight) {
+//             if(node->pRight->balance == LH) {
+//             // cout << "Rotate right at subnode " << node->pRight->data << endl;
+//                 rotateRight(node->pRight);
+//             }
+//         }
+//         // cout << "Rotate left at node " << node->data << endl;
+//         rotateLeft(node);
+//     }
+//     else if(i == 1) {
+//         node->balance = RH;
+//         // cout << "Node " << node->data << "'s BalanceValue is " << node->balance << endl;
+//     }
+//     else if(i == -1) {
+//         node->balance = LH;
+//         // cout << "Node " << node->data << "'s BalanceValue is " << node->balance << endl;
+//     }
+//     // cout << LH << " " << EH << " " << RH << endl;
+// }
+
+
+// void insert(const T &value){
+//     //TODO
+//     insertRec(value, root);
+// }
+
